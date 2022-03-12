@@ -1,0 +1,25 @@
+﻿<Window x:Class="Primes13.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Primes13"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" x:Name="window">
+    <Grid>
+        <DockPanel>
+            <Label Content="First N prime numbers in Base-13" FontSize="40" HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="20"/>
+            <DockPanel Height="60" VerticalAlignment="Center" HorizontalAlignment="Stretch" DockPanel.Dock="Top" MaxWidth="600" Margin="100,0,100,0" LastChildFill="False">
+                <Label Content="Input number in Base 13 form" FontSize="15" HorizontalAlignment="Left" DockPanel.Dock="Top" />
+                <TextBox x:Name="inputBox" Width="200" Height="30" FontSize="20" DockPanel.Dock="Left"/>
+                <Button x:Name="runButton" Width="100" Height="30" Content="Run" FontSize="20" DockPanel.Dock="Right" Click="runButton_Click" />
+            </DockPanel>
+            <Label Content="Result:" FontSize="15" HorizontalAlignment="Left" DockPanel.Dock="Top" Margin="100,0,100,0"/>
+            <Border x:Name="border" Margin="100,0,100,50" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Bottom">
+                <ScrollViewer VerticalAlignment="Stretch">
+                    <TextBlock x:Name="outputBox" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Stretch" Height="auto"/>
+                </ScrollViewer>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>
